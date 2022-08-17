@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="emp" class="com.samples.S01springcoredi.Employee" p:id="13" p:name="ramu">
+			</bean>
+		<bean name="hosp" class="com.samples.S01springcoredi.Hospital" >
+		<property name="name" value="Apolo" />
+		<property name="departments">
+		<list>
+		<value>reception</value>
+		<value>Emergency</value>
+		<value>out-patients</value>
+		
+		</list>
+		
+		
+		</property>	
+	</bean>
+	<bean name="cd" class="com.samples.S01springcoredi.CarDealer">
+	<property name="name" value="HarryMotors" />
+	<property name="modelName">
+	<set>
+	<value>toyota</value>
+	<value>BMW</value>
+	<value>hyundai</value>
+	
+	</set>
+	
+	
+	</property>
+	</bean>
+	<bean name="ctm" class="com.samples.S01springcoredi.Customer">
+	<property name="id" value="55" />
+	<property name="products">
+	<map>
+	<entry key="100" value="Iphone" />
+	<entry key="200" value="laptop" />
+	<entry key="300" value="mouse" />
+	
+	</map>
+	
+	
+	</property>
+	</bean>
+	<bean name="item" class="com.samples.S01springcoredi.Item" p:id="1" p:name="shop" p:price="50" p:quantity="5" />
+	
+	<bean name="shoppingcart" class="com.samples.S01springcoredi.ShoppingCart" p:item-ref="item" />
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+</beans>
