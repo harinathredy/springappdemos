@@ -1,4 +1,6 @@
-package com.samples.S01springcoredi;
+package com.samples.S01springcoredi.scopes;
+
+import org.springframework.beans.factory.annotation.Required;
 
 public class Employee {
 
@@ -15,6 +17,8 @@ public class Employee {
 	public String getName() {
 		return name;
 	}
+	
+	@Required
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -29,6 +33,5 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
 	}
-	
-	
+
 }
